@@ -1,8 +1,4 @@
-footer {
-  text-align: center;
-  margin-top: 40px;
-  padding: 10px 0;
-  color: #fff;
-  background-color: #0077cc;
-  border-radius: 0 0 10px 10px;
+#work li:hover {
+  color: #0077cc;
+  font-weight: bold;
 }
