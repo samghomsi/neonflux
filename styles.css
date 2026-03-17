@@ -7,3 +7,17 @@ body {
   padding: 0 20px;
   background: linear-gradient(135deg, #f9f9f9, #e0f7fa);
 }
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #004d80;
+  transform: scale(1.05);
+}
