@@ -93,3 +93,22 @@ section {
 section {
   margin-bottom: 50px;
 }
+
+.side-left, .side-right {
+  position: fixed;
+  top: 100px;
+  width: 150px;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.5;
+}
+
+.side-left {
+  left: 10px;
+  text-align: left;
+}
+
+.side-right {
+  right: 10px;
+  text-align: right;
+}
