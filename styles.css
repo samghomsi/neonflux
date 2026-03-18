@@ -63,3 +63,28 @@ h1 {
   text-align: center;
   margin-top: 20px;
 }
+body {
+  position: relative;
+  z-index: 1;
+}
+
+body::before {
+  z-index: -1; /* keep confetti behind everything */
+}
+body {
+  min-height: 100vh;
+}
+section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 12px;
+
+  background-image:
+    radial-gradient(circle, rgba(255, 100, 100, 0.15) 2px, transparent 2px),
+    radial-gradient(circle, rgba(100, 200, 255, 0.15) 2px, transparent 2px),
+    radial-gradient(circle, rgba(100, 255, 180, 0.15) 2px, transparent 2px);
+
+  background-size: 80px 80px, 100px 100px, 120px 120px;
+}
