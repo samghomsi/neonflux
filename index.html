@@ -1,110 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-<style>
-html {
-  scroll-behavior: smooth;
-}
-</style>
+<html>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Samuel Ghomsi</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<canvas id="confetti"></canvas>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="#about">About</a> |
-    <a href="#work">Work</a> |
-    <a href="#contact">Contact</a>
-  </nav>
+<body>
 
-  <!-- Header -->
-  <header>
+  <section id="hero">
     <h1>Samuel Ghomsi</h1>
-    <p>Video editor & aspiring web creator</p>
-  </header>
-
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hi! I create high-quality video edits and enjoy building websites. This is my portfolio website.</p>
+    <p>Video Editor • Content Creator • Creative Designer</p>
+    <a href="#work" class="btn">View My Work</a>
   </section>
 
-  <!-- Work Section -->
-  <section id="work">
-    <h2>My Work</h2>
-    <ul>
-      <li>Video Editing Projects</li>
-      <li>Website Creations</li>
-    </ul>
-    <!-- optional image -->
-    <img src="images/video1.png" alt="Video project screenshot">
-  </section>
-  <h2>Contact Me</h2>
-  <p>Email: samghomsi@example.com</p>
-  <a href="mailto:samghomsi@example.com" class="btn">Send Email</a>
-  <p>GitHub: <a href="https://github.com/samghomsi">samghomsi</a></p>
-</section>
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Samuel Ghomsi</p>
- <script>
-const canvas = document.getElementById('confetti');
-const ctx = canvas.getContext('2d');
+  <!-- your other sections go here -->
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-const confettiCount = 150;
-const confetti = [];
-
-for (let i = 0; i < confettiCount; i++) {
-  confetti.push({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    r: Math.random() * 6 + 4,
-    d: Math.random() * confettiCount,
-    color: `hsl(${Math.random() * 360}, 100%, 50%)`,
-    tilt: Math.random() * 10 - 10,
-    tiltAngleIncremental: Math.random() * 0.07 + 0.05,
-    tiltAngle: 0
-  });
-}
-
-function drawConfetti() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  confetti.forEach(c => {
-    ctx.beginPath();
-    ctx.lineWidth = c.r;
-    ctx.strokeStyle = c.color;
-    ctx.moveTo(c.x + c.tilt + c.r / 2, c.y);
-    ctx.lineTo(c.x + c.tilt, c.y + c.tilt + c.r / 2);
-    ctx.stroke();
-  });
-  updateConfetti();
-}
-
-function updateConfetti() {
-  confetti.forEach(c => {
-    c.tiltAngle += c.tiltAngleIncremental;
-    c.y += (Math.cos(c.d) + 3 + c.r / 2) / 2;
-    c.x += Math.sin(c.tiltAngle) * 2;
-    c.tilt = Math.sin(c.tiltAngle) * 12;
-
-    if (c.y > canvas.height) {
-      c.x = Math.random() * canvas.width;
-      c.y = -20;
-      c.tilt = Math.random() * 10 - 10;
-    }
-  });
-}
-
-setInterval(drawConfetti, 25);
-
-window.addEventListener('resize', () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-});
-</script> </footer>
+</body>
+</html>
