@@ -59,3 +59,7 @@ body::before {
 body::before {
   animation: moveConfetti 20s linear infinite;
 }
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
