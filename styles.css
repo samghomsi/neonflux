@@ -131,3 +131,27 @@ section {
 .thumb-container:hover img.thumb {
   transform: scale(1.08);
 }
+
+/* Hero section background with faint NeonFlux Studios logo */
+#hero {
+  position: relative;
+  background: url('ChatGPT Image 18 mars 2026, 21_23_31.png') no-repeat center center;
+  background-size: 300px 300px; /* adjust size to your preference */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Dark overlay so text is readable */
+#hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* tweak opacity 0.3–0.6 for more/less faint */
+  z-index: 1;
+}
+
+/* Ensure text and buttons appear above overlay */
+#hero * {
+  position: relative;
+  z-index: 2;
+}
