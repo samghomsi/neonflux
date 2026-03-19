@@ -112,3 +112,22 @@ section {
   right: 10px;
   text-align: right;
 }
+
+/* Thumbnail container */
+.thumb-container {
+  overflow: hidden;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+/* Animated hover zoom */
+.thumb-container img.thumb {
+  display: block;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.thumb-container:hover img.thumb {
+  transform: scale(1.08);
+}
