@@ -261,3 +261,17 @@ section {
 .side-left, .side-right {
   text-shadow: 0 0 10px rgba(0,200,255,0.3);
 }
+
+#hero {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid #00c6ff;
+}
