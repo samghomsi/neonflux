@@ -275,3 +275,12 @@ section {
   background: transparent;
   border: 1px solid #00c6ff;
 }
+
+section {
+  background: rgba(255,255,255,0.06);
+  border-radius: 16px;
+  margin: 40px auto;
+  max-width: 1000px;
+  padding: 40px;
+  backdrop-filter: blur(12px);
+}
