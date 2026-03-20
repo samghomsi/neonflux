@@ -163,6 +163,10 @@
   cards.forEach(card => {
     const video = card.querySelector("video");
 
+    document.querySelectorAll("video").forEach(video => {
+  video.play().catch(() => {});
+});
+
     // click with sound
     card.addEventListener("click", () => {
       video.muted = false;
