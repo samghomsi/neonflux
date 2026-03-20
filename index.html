@@ -131,18 +131,15 @@
 
 <script>
   const cursor = document.querySelector(".cursor");
+  let hue = 0;
 
   document.addEventListener("mousemove", (e) => {
     cursor.style.left = e.clientX + "px";
     cursor.style.top = e.clientY + "px";
 
-    // Generate changing colors
-    const r = Math.floor(Math.random() * 255);
-    const g = Math.floor(Math.random() * 255);
-    const b = Math.floor(Math.random() * 255);
-
-    cursor.style.background = `rgb(${r}, ${g}, ${b})`;
-    cursor.style.boxShadow = `0 0 20px rgb(${r}, ${g}, ${b})`;
+    hue += 2;
+    cursor.style.background = `hsl(${hue}, 100%, 60%)`;
+    cursor.style.boxShadow = `0 0 20px hsl(${hue}, 100%, 60%)`;
   });
 </script>
   
