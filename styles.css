@@ -243,3 +243,21 @@ section:nth-child(even) {
   right: 10px;
   text-align: right;
 }
+
+body::after {
+  content: "";
+  position: fixed;
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: rgba(255,255,255,0.05);
+}
+
+section {
+  padding: 40px;
+}
+
+.side-left, .side-right {
+  text-shadow: 0 0 10px rgba(0,200,255,0.3);
+}
