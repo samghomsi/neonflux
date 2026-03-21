@@ -173,7 +173,7 @@ section {
   border-radius: 12px;
   text-align: center;
   transition: 0.3s;
-  max-width: 400px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -509,4 +509,11 @@ section {
 
 .video-card:hover video {
   filter: brightness(1.1);
+}
+
+#work ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0;
 }
